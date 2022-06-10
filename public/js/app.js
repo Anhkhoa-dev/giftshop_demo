@@ -39,8 +39,7 @@ app.run(function($rootScope, $http){
         $rootScope.listCategory = rsp.data.ListCategorys;
         $rootScope.images = rsp.data.banner;
         $rootScope.max = $rootScope.listProduct.length;
-    })
-        $rootScope.ListPro_20 = [];
+	    $rootScope.ListPro_20 = [];
         $rootScope.listPro = []
         $rootScope.stemp = [];
         $rootScope.listCate_Wasrose = [];
@@ -114,6 +113,8 @@ app.run(function($rootScope, $http){
             $rootScope.count_Business++;
           }
         }
+    })
+        
     $rootScope.myCart = [];
     $rootScope.Subtotal = 0;
     $rootScope.countCart = 0;
