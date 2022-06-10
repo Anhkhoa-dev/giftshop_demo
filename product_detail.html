@@ -1,0 +1,220 @@
+    <div class="section__title" >
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5><a href="#!/">Home</a>/Product/<span>Teaddy bear</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Code header ends -->
+
+    <!-- product detail  start -->
+    <section class="product__detail" ng-controller="product__detail">
+        <div class="container">
+            <div class="row" ng-repeat="p in pro_detail">
+                <div class="product__detail_left col-md-6 col-sm-12 col-12">
+                    <div class="row product_detail_img">
+                        <div class="col-12">
+                            <img src="{{p.pic}}" alt="{{p.name}}" class="product__img_full img__full border__radius_10">
+                        </div>
+                        <div class="col-12">
+                            <div class="row mt-3">
+                                <div class="col-md-4 col-sm-12 col-12">
+                                    <img src="./public/image/tb_bo02.jpg" alt="" class="product__img_child img__full border__radius_10">
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-12">
+                                    <img src="./public/image/tb_bo03.jpg" alt="" class="product__img_child img__full border__radius_10">
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-12">
+                                    <img src="./public/image/tb_bo04.jpg" alt="" class="img__full border__radius_10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code phần comment trong product detail -->
+                    <div class="row product_detail_comment">
+                        <div class="pro__comment col-12 p-2">
+
+
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="product__detail_right col-md-6 col-sm-12 col-12">
+                    <div class="col-12">
+                        <h2 class="product__detail-name col-12">{{p.name}}</h2>
+                        <div class="product__rating col-12">
+                            <div class="row">
+                                <div class="product__rating-rate col-6">
+                                    <span>4.5</span>
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </span>
+                                </div>
+                                <div class="product__rating-comment col-3">
+                                    <span>200</span>
+                                    <i class="fa-solid fa-comment"></i>
+                                </div>
+                                <div class="product__rating-like col-3">
+                                    <span>145</span>
+                                    <span><i class="fa-solid fa-thumbs-up"></i></span>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="product__detail-price col-12">
+                            <div class="detail__price-old">Price old: <span>$ {{p.price_old}}</span></div>
+                            <div class="detail__price-new">Price: <span>$ {{p.price_new}}</span></div>
+                        </div>
+                        <div class="product__quanity col-12">
+                            <div class="quanity__group">
+                                <label for="">Quanity: </label>
+                                <i class="fa-solid fa-square-minus"></i><input type="text" class="number" value="1"><i class="fa-solid fa-square-plus"></i>
+                            </div>
+                        </div>
+                        <div class="product__detail-description">
+                            <div class="product__detail-header">
+                                <h5>Product Description</h5>
+                                <i class="fa-solid fa-caret-down" data-bs-toggle="collapse" href="#pro_descshow"></i>
+                            </div>
+                            <div id="pro_descshow" class="collapse col-12">
+                                <p>{{p.desc}}</p>
+                              </div>
+                        </div>
+                        <div class="product__detail-download col-12 mt-5">
+                            <a href="#"><i class="fa-solid fa-download"></i> Download specifications </a>
+                        </div>
+
+                        <div class="product__button">
+                            <div class="row">
+                                <div class="col-sm-6 col-12">
+                                    <a class="btn__addtocart" ng-click="AddCart(p)"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
+                                </div>
+                                <div class="col-sm-6 col-12">
+                                    <a href='#!Products/Checkout' class="btn__buynow" ng-click="AddCart(p)"></i>Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="releated__pro">
+        <div class="container">
+            <div class="title mb-5">Related Products</div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__product">
+                    <div class="card__img">
+                        <a href="#!Products/ProductDetail"><img src="./public/image/tt_amtra01.jpg" alt="ấm trà" class="img__full border__radius_10"></a>
+                        <a href="#!Products/ProductDetail" class="icon_comparision"><i class="fa-solid fa-circle-plus"></i></a>
+                    </div>
+                    <div class="card__detail">
+                        <a href="#" class="product__name">Product name 01</a>
+                        <div class="product__price">
+                            <div class="price_old">$ 20</div>
+                            <div class="price_new">$ 15</div>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#" class="product__add">add cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__product">
+                    <div class="card__img">
+                        <a href="#!Products/ProductDetail"><img src="./public/image/tt_amtra01.jpg" alt="ấm trà" class="img__full border__radius_10"></a>
+                        <a href="#!Products/ProductDetail" class="icon_comparision"><i class="fa-solid fa-circle-plus"></i></a>
+                    </div>
+                    <div class="card__detail">
+                        <a href="#" class="product__name">Product name 01</a>
+                        <div class="product__price">
+                            <div class="price_old">$ 20</div>
+                            <div class="price_new">$ 15</div>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#" class="product__add" ng-click="AddCart(p)">add cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__product">
+                    <div class="card__img">
+                        <a href="#!Products/ProductDetail"><img src="./public/image/tt_amtra01.jpg" alt="ấm trà" class="img__full border__radius_10"></a>
+                        <a href="#!Products/ProductDetail" class="icon_comparision"><i class="fa-solid fa-circle-plus"></i></a>
+                    </div>
+                    <div class="card__detail">
+                        <a href="#" class="product__name">Product name 01</a>
+                        <div class="product__price">
+                            <div class="price_old">$ 20</div>
+                            <div class="price_new">$ 15</div>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#" class="product__add">add cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__product">
+                    <div class="card__img">
+                        <a href="#!Products/ProductDetail"><img src="./public/image/tt_amtra01.jpg" alt="ấm trà" class="img__full border__radius_10"></a>
+                        <a href="#!Products/ProductDetail" class="icon_comparision"><i class="fa-solid fa-circle-plus"></i></a>
+                    </div>
+                    <div class="card__detail">
+                        <a href="#" class="product__name">Product name 01</a>
+                        <div class="product__price">
+                            <div class="price_old">$ 20</div>
+                            <div class="price_new">$ 15</div>
+                        </div>
+                        <div class="product__footer">
+                            <div class="product__rate">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#" class="product__add">add cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        </div>
+        
+    </section>

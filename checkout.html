@@ -1,0 +1,207 @@
+<div class="check__out" ng-controller="checkout">
+    <div class="section__title">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5><a href="#!/">Home</a> / <span>Check out</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="container col-lg-12">
+        <h2>Billing info</h2> 
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="group__control">
+                    <span>First name</span> <br>
+                    <input type="text" id="first_name" placeholder="Enter your first name">
+                </div>
+                <div class="group__control">
+                    <span>Email</span> <br>
+                    <input type="email" id="uemail" placeholder="Enter your email">
+                </div>
+                <div class="group__control">
+                    <span>Address</span> <br>
+                    <input type="text" id="address" placeholder="Enter your address">
+                </div>
+                <div class="group__control">
+                    <span>Town / City</span> <br>
+                    <input type="text" id="town_city" placeholder="Enter your town or city">
+                </div>
+                <div class="group__control-checkbox">
+                    <label class="confirmation"><span class="check_confirm">Ship to different address?</span>
+                        <input type="checkbox">
+                        <span class="checkbox"></span>
+                    </label>
+                </div>
+                <div class="group__control">
+                    <span>Name revice</span> <br>
+                    <input type="text" id="name_revice" placeholder="Enter your name">
+                </div>
+                <div class="group__control">
+                    <span>Address</span> <br>
+                    <input type="text" id="address" placeholder="Enter your adrress">
+                </div>
+                <div class="group__control">
+                    <span>Town / City</span> <br>
+                    <input type="text" id="town_city" placeholder="Enter your town or city">
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="group__control">
+                    <span>Last name</span> <br>
+                    <input type="text" id="last_name" placeholder="Enter your last name">
+                </div>
+                <div class="group__control">
+                    <span>Phone</span> <br>
+                    <input type="text" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="group__control">
+                    <span>State / Country</span><i class="fa-solid fa-caret-down"></i> <br>
+                    <input type="text" id="state_country" placeholder="Enter your state or country">
+                </div>
+                <div class="group__control">
+                    <span>Zip / Postal code</span> <br>
+                    <input type="text" id="zip_postal code" placeholder="Enter your zip or postal code">
+                </div>
+                <div class="group__control" id="group__control-phone">
+                    <span>Phone</span> <br>
+                    <input type="text" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="group__control">
+                    <span>State / Country</span><i class="fa-solid fa-caret-down"></i> <br>
+                    <input type="text" id="state_country" placeholder="Enter your state or country">
+                </div>
+                <div class="group__control">
+                    <span>Zip / Postal code</span> <br>
+                    <input type="text" id="zip_postal code" placeholder="Enter your zip or postal code">
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="order__summary">
+                    <h4>Order summary</h4>
+                    <hr>
+                    <div class="order__summary-product container col-lg-12" ng-repeat="product in myCart">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="{{product.pic}}" alt="{{product.name}}" class="img__full">
+                            </div>
+                            <div class="order__summary-info col-md-6">
+                                <span class="order__summary-name mb-3">{{product.name}}</span> <br><br> 
+                                <span class="order__summary-amount">x {{product.countItems}}</span> <br>
+                                <span class="order__summary-price-new">${{product.price_new}}</span> <br>
+                                <span class="order__summary-price-old">${{product.price_old}}</span> <br>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="order__summary-content container col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <span class="order__summary-text">Subtotal</span> <br> <br>
+                                <span class="order__summary-text">Tax</span> <br> <br> 
+                                <span class="order__summary-text">Shipping</span> <br> <br>
+                            </div>
+                            <div class="order__summary-count col-lg-6">
+                                <span class="order__summary-money">${{Subtotal}}</span> <br> <br>
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="order__summary-percent col-lg-6">
+                                            <span class="order__summary-text">10%</span> 
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <span class="order__summary-money">${{Subtotal*0.1}}</span>
+                                        </div>
+                                    </div> <br> 
+                                </div>
+                                <span class="order__summary-money">$0</span> <br>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="order__summary-total container col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <span class="order__summary-text">Total order</span>
+                            </div>
+                            <div class="order__summary-count col-lg-6">
+                                <span class="order__summary-money">${{Subtotal + Subtotal*0.1}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Billing info -->
+
+    <!-- Start Payment method -->
+    <section class="container col-lg-12">
+        <h2>Payment method</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <label class="payment"><span class="payment__delivery">Payment to delivery</span>
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="payment"><img src="../public/image/PngItem_15888.png" class="img__full" alt="">
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="group__control">
+                    <span>Card number</span> <br>
+                    <input type="text" id="card_number" placeholder="Enter your card number">
+                </div>
+                <div class="group__control">
+                    <span>Card holder</span> <br>
+                    <input type="text" id="card_holder" placeholder="Enter your card holder">
+                </div>
+                <label class="payment"><img src="../public/image/2560px-PayPal_logo.svg.png" class="img__full" alt="">
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="card__info col-lg-4">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="group__control col-lg-6">
+                            <span>Expiration date</span> <br>
+                            <input type="text" id="expiration_date" placeholder="DD/MM/YY">
+                        </div>
+                        <div class="group__control col-lg-6">
+                            <span>CVC</span> <br>
+                            <input type="text" id="cvc" placeholder="Enter cvc">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Payment method -->
+
+    <!-- Start Order notes -->
+    <section class="container col-lg-12">
+        <h2>Order notes</h2>
+            <div class="order__notes col-lg-6">
+                <span>Lorem Ipsum is simply dummy text of the printing and typesetting</span>
+                <textarea name="notes" id="notes" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting"></textarea>
+            </div>
+    </section>
+    <!-- End Order notes -->
+
+    <!-- Start Confirmation -->
+    <section class="container col-lg-12">
+        <h2>Confirmation</h2>
+        <div class="confirm col-lg-12">
+            <span>Lorem Ipsum is simply dummy text of the printing and typesetting</span>
+            <label class="confirmation"><span>Lorem Ipsum is simply dummy text of the printing and typesetting</span>
+                <input type="checkbox">
+                <span class="checkbox"></span>
+            </label>
+        </div>
+    </section>
+
+    </div>
+

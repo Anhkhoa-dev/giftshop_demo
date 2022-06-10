@@ -1,0 +1,113 @@
+// css header top
+
+.header__top{
+    background-color: $color__02;
+    padding: 1rem 0;
+    color: $color__04;
+    i, span{
+        font-size: 0.9rem;
+    }
+    .header__icon_list{
+        text-decoration: none;
+        color: $color__04;
+        cursor: pointer;
+        .fa-list-check{
+            position: relative;
+            margin-right: 30px;
+            .cart_products{
+                position: absolute;
+                top: -17px;
+                right: -15px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color__05;
+                color: $color__02;
+                font-size: 0.75rem;
+            }
+        }
+    }
+    a:hover{
+        color: $color__05;
+    }
+}
+
+//css header middle
+.header__middle{
+    padding: 0.5rem 0;
+    .search{
+        text-align: left;
+        position: relative;
+        .input__search{
+            width: 80%;
+            padding: 9px 15px;
+            border: 1px solid $color__02;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 10%;
+            font-size: 1rem;
+            
+        }
+        .input__search:focus{
+            box-shadow: $box_shadow_full;
+        }
+        .icon_search{
+            position: absolute;
+            top: 31px;
+            right: 12%;
+            color: $color__02;
+            font-size: 1.2rem;
+        }
+        .btn__add{
+            i, span{
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+//css header footer
+
+.header__footer{
+    background-color: #fff;
+    .logo_mobile{
+        display: none;
+    }
+    .icon__bar{
+        display: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #111;
+        color: $color__02;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        .menu__item{
+            padding: 25px 0;
+            .menu__link{
+                color: $color__02;
+                text-decoration: none;
+                padding: 10px 25px;
+                border-radius: 10px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .menu__link:hover{
+                background-color: $color__02;
+                color: #fff;
+            }
+            .menu__link.active01{
+                background-color: $color__02;
+                color: #fff;
+            }
+        }
+    }
+}
+

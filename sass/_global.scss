@@ -1,0 +1,163 @@
+// css toàn cục lập đi lập lại nhiều lần
+section{
+    padding: 50px 0;
+}
+.border__radius_10{
+    border-radius: 10px;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: $box_shadow_full;
+    object-fit: cover;
+}
+.title{
+    position: relative;
+    display: inline-block;
+    font-family: $font__01;
+    font-size: 42px;
+    font-weight: 700;
+    color: $color__02;  
+    margin-left: 42%; 
+}
+.title::before{
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 4px;
+    bottom: 2px;
+    left: 0;
+    background-color: $color__02;
+}
+.title::after{
+    position: absolute;
+    content: '';
+    width: 45%;
+    height: 3px;
+    bottom:-5px;
+    left: 0;
+    background-color: $color__02;
+}
+.title__01{
+    position: relative;
+    display: inline-block;
+    font-family: $font__01;
+    font-size: 42px;
+    font-weight: 700;
+    color: $color__01;    
+}
+.title__01::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    height: 4px;
+    bottom: 2px;
+    left: 0;
+}
+.title__01::after{
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 3px;
+    bottom:-5px;
+    left: 0;
+}
+.pad_l_15{
+    padding-left: 15px;
+}
+.product__showmore{
+    color: $color__02;
+}
+.btn__add{
+    border: 1px solid $color__02;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: $color__04;
+    background-color: $color__02;
+    text-decoration: none;
+}
+.btn__add:hover{
+    transform: scale(1.1);
+}
+.box__croll{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    background-color: $color__02;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.box__croll:hover{
+    box-shadow: $box_shadow_full;
+}
+.img__full{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title_footer{
+    position: relative;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: $font__01;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.title_footer::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    bottom: -10px;
+    left: 0;
+    
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $color__02; }
+    
+    .pro_select{
+        padding: 8px 15px;
+        border: 1px solid $color__02;
+        border-radius: 10px;
+        margin-right: 10px;
+        font-size: 1.25rem;
+        color: $color__02;
+    }
+// .item{
+//     width: 200px;
+//     height: 300px;
+//     background-color: green;
+// }
+.product__navigation{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    .btn_page{
+        width: 50px;
+        padding: 7px;
+        background-color: $color__02;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: end;
+    }
+    .btn_page:hover{
+        background-color: #fff;
+        color: $color__01;
+    }
+}

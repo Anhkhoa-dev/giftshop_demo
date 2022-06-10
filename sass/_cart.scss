@@ -1,0 +1,302 @@
+// Billing info //
+h2{
+    color: $color__03;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.group__control{
+    margin: 10px 0;
+}
+
+.group__control span{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.group__control input{
+    outline: none;
+    width: 98%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #BCB8B7;
+    background-color: #F3EFEF;
+    margin: 20px 0;
+}
+
+.group__control i{
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.group__control-checkbox{
+    margin: 10px 0;
+    border: 1px solid $color__02;
+    border-radius: 10px;
+    padding: 0 20px; 
+    width: 80%;
+}
+
+.group__control-checkbox .check_confirm{
+    color: black;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#group__control-phone{
+    margin-top: 95px;
+}
+
+// Order summary //
+.order__summary{
+    background-color: #fff;
+    border: 1px solid $color__02;
+    border-radius: 10px;
+    .order__summary-product{
+        margin-bottom: 15px;
+        img{
+            width: 100%;
+            height: 140px;
+        }
+    }
+}
+
+.order__summary h4{
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+hr{
+    width: 90%;
+    margin: 10px auto;
+}
+
+// .order__summary img{
+//     border-radius: 30px;
+// }
+.order__summary-content{
+    border-top: 1px solid #BCB8B7;
+    padding-top: 15px;
+}
+.order__summary-info{
+    margin: 9px 0;
+}
+
+.order__summary-name{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.order__summary-amount{
+    font-weight: 700;
+    font-size: 16px;
+    color: #BCB8B7;
+}
+
+.order__summary-price-new{
+    font-weight: 600;
+    font-size: 16px;
+    color: $color__02;
+}
+
+.order__summary-price-old{
+    font-weight: 600;
+    font-size: 14px;
+    color: #BCB8B7;
+}
+
+.order__summary-text{
+    font-weight: 700;
+    font-size: 16px;
+    color: #827D7D;
+}
+
+.order__summary-money{
+    font-weight: 700;
+    font-size: 15px;
+    color: $color__02;
+    margin: 3px 0;
+}
+
+.order__summary-percent{
+    text-align: left;
+}
+
+.order__summary-count{
+    text-align: right;
+}
+
+.order__summary-total{
+    margin: 10px 0 20px;
+}
+
+.card__info{
+    margin-top: 253px;
+}
+
+// Payment method // 
+
+/* The payment */
+.payment {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.payment__delivery{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.payment img{
+    border-radius: 30px;
+}
+
+// radio // 
+
+  /* Hide the browser's default radio payment */
+.payment input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+  /* Create a custom radio payment */
+.checkmark {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+  
+/* On mouse-over, add a grey background color */
+.payment:hover input ~ .checkmark {
+    background-color: #fff;
+}
+  
+/* When the radio payment is checked, add a blue background */
+.payment input:checked ~ .checkmark {
+    background-color: #000;
+}
+  
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the indicator (dot/circle) when checked */
+.payment input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+/* Style the indicator (dot/circle) */
+.payment .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+}
+
+// checkbox //
+
+/* The confirmation */
+.confirmation {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+/* Hide the browser's default checkbox */
+.confirmation input {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+  
+/* Create a custom checkbox */
+.checkbox {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid #2C2E35;
+    border-radius: 5px;
+}
+  
+/* When the checkbox is checked, add a blue background */
+.confirmation input:checked ~ .checkbox {
+    background-color: $color__02;
+}
+  
+/* Create the checkbox/indicator (hidden when not checked) */
+  .checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the checkbox when checked */
+.confirmation input:checked ~ .checkbox:after {
+    display: block;
+}
+  
+/* Style the checkbox/indicator */
+.confirmation .checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.order__notes span, .confirm span{
+    font-weight: 600;
+    font-size: 18px;
+    color: #BCB8B7;
+}
+
+.order__notes textarea{
+    outline: none;
+    border: 1px solid $color__02;
+    border-radius: 10px;
+    width: 134%;
+    height: 130px;
+    margin: 20px 0;
+    padding: 10px;
+}

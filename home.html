@@ -1,0 +1,566 @@
+<!-- Home banner -->
+<div class="home__slider" id="home__banner">
+    
+</div>
+
+<section class="best__slider" ng-controller="best__seller">
+    <div class="owl-carousel owl-theme">
+        <!-- <div ng-repeat="p in ListPro_20">
+            <div class="item mb-3" >
+                <img src="{{p.pic}}" alt="">
+        </div>   -->
+    </div>
+    </div>
+</section>
+
+<section class="top__brand">
+    <div class="title mb-5">Top Brand</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 mb-4">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="logo_brand col-12">
+                    <img src="./public/image/logo_thuong_hieu/logo_gau_bong.png" alt="" class="img__full">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="product__home" ng-controller="product_list">
+    <div class="container">
+        <div class="title mb-5">Product List</div>
+        <div class="row">
+            <div class="col-12">
+                <div class="product__tab">
+                    <div class="tab__header">
+                        <div class="tab__left">
+                            <button class="pro_btn tablink active " onclick="openCity(event,'waxrose')">Wax
+                                rose</button>
+                            <button class="pro_btn tablink" onclick="openCity(event,'Stuffet')">Teaddy bears</button>
+                            <button class="pro_btn tablink" onclick="openCity(event,'Accessory')">Accessory</button>
+                            <button class="pro_btn tablink" onclick="openCity(event,'Homedecor')">Home decor</button>
+                            <button class="pro_btn tablink" onclick="openCity(event,'Personalitems')">Personal
+                                items</button>
+                            <button class="pro_btn tablink" onclick="openCity(event,'Businessgifts')">Business
+                                gifts</button>
+                        </div>
+                    </div>
+                    <div class="tab__content mt-3">
+                        <div id="waxrose" class="product_tabs_content pro_tab">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 mb-4"
+                                    ng-repeat="p in listCate_Wasrose">
+                                    <div class="card__product" data-id="{{p.id}}">
+                                        <div class="card__img">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"><img src="{{p.pic}}"
+                                                    alt="{{p.name}}" class="img__full border__radius_10"></a>
+                                            <!-- <a href="#" class="icon_comparision"><i
+                                                    class="fa-solid fa-circle-plus"></i></a> -->
+                                        </div>
+                                        <div class="card__detail">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"
+                                                class="product__name">{{p.name}}</a>
+                                            <div class="product__price">
+                                                <div class="price_old">$ {{p.price_old}}</div>
+                                                <div class="price_new">$ {{p.price_new}}</div>
+                                            </div>
+                                            <div class="product__footer">
+                                                <div class="product__rate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <a href="#" class="product__add" ng-click="addCart(p.id)">add cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="product__footer mt-5">
+                                <div class="product__navigation">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="product__showmore">
+                                    <p>view 1 to 8 products out of 150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Stuffet" class="product_tabs_content pro_tab" style="display: none;">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 mb-4"
+                                    ng-repeat="p in listCate_Stuffet">
+                                    <div class="card__product" data-id="{{p.id}}">
+                                        <div class="card__img">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"><img src="{{p.pic}}"
+                                                    alt="{{p.name}}" class="img__full border__radius_10"></a>
+                                            <!-- <a href="#" class="icon_comparision"><i
+                                                    class="fa-solid fa-circle-plus"></i></a> -->
+                                        </div>
+                                        <div class="card__detail">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"
+                                                class="product__name">{{p.name}}</a>
+                                            <div class="product__price">
+                                                <div class="price_old">$ {{p.price_old}}</div>
+                                                <div class="price_new">$ {{p.price_new}}</div>
+                                            </div>
+                                            <div class="product__footer">
+                                                <div class="product__rate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <a href="#" class="product__add">add cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__footer mt-5">
+                                <div class="product__navigation">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="product__showmore">
+                                    <p>view 1 to 8 products out of 150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Accessory" class="product_tabs_content pro_tab" style="display: none;">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 mb-4"
+                                    ng-repeat="p in listCate_Accessory">
+                                    <div class="card__product" data-id="{{p.id}}">
+                                        <div class="card__img">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"><img src="{{p.pic}}"
+                                                    alt="{{p.name}}" class="img__full border__radius_10"></a>
+                                            <!-- <a href="#" class="icon_comparision"><i
+                                                    class="fa-solid fa-circle-plus"></i></a> -->
+                                        </div>
+                                        <div class="card__detail">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"
+                                                class="product__name">{{p.name}}</a>
+                                            <div class="product__price">
+                                                <div class="price_old">$ {{p.price_old}}</div>
+                                                <div class="price_new">$ {{p.price_new}}</div>
+                                            </div>
+                                            <div class="product__footer">
+                                                <div class="product__rate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <a href="#" class="product__add">add cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__footer mt-5">
+                                <div class="product__navigation">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="product__showmore">
+                                    <p>view 1 to 8 products out of 150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Homedecor" class="product_tabs_content pro_tab" style="display: none;">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 mb-4"
+                                    ng-repeat="p in listCate_Homedecor">
+                                    <div class="card__product" data-id="{{p.id}}">
+                                        <div class="card__img">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"><img src="{{p.pic}}"
+                                                    alt="{{p.name}}" class="img__full border__radius_10"></a>
+                                            <!-- <a href="#" class="icon_comparision"><i
+                                                    class="fa-solid fa-circle-plus"></i></a> -->
+                                        </div>
+                                        <div class="card__detail">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"
+                                                class="product__name">{{p.name}}</a>
+                                            <div class="product__price">
+                                                <div class="price_old">$ {{p.price_old}}</div>
+                                                <div class="price_new">$ {{p.price_new}}</div>
+                                            </div>
+                                            <div class="product__footer">
+                                                <div class="product__rate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <a href="#" class="product__add">add cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__footer mt-5">
+                                <div class="product__navigation">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="product__showmore">
+                                    <p>view 1 to 8 products out of 150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Personalitems" class="product_tabs_content pro_tab" style="display: none;">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 mb-4"
+                                    ng-repeat="p in listCate_Personalitems">
+                                    <div class="card__product" data-id="{{p.id}}">
+                                        <div class="card__img">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"><img src="{{p.pic}}"
+                                                    alt="{{p.name}}" class="img__full border__radius_10"></a>
+                                            <!-- <a href="#" class="icon_comparision"><i
+                                                    class="fa-solid fa-circle-plus"></i></a> -->
+                                        </div>
+                                        <div class="card__detail">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"
+                                                class="product__name">{{p.name}}</a>
+                                            <div class="product__price">
+                                                <div class="price_old">$ {{p.price_old}}</div>
+                                                <div class="price_new">$ {{p.price_new}}</div>
+                                            </div>
+                                            <div class="product__footer">
+                                                <div class="product__rate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <a href="#" class="product__add">add cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__footer mt-5">
+                                <div class="product__navigation">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="product__showmore">
+                                    <p>view 1 to 8 products out of 150</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Businessgifts" class="product_tabs_content pro_tab" style="display: none;">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 mb-4"
+                                    ng-repeat="p in listCate_Businessgifts">
+                                    <div class="card__product" data-id="{{p.id}}">
+                                        <div class="card__img">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"><img src="{{p.pic}}"
+                                                    alt="{{p.name}}" class="img__full border__radius_10"></a>
+                                            <!-- <a href="#" class="icon_comparision"><i
+                                                    class="fa-solid fa-circle-plus"></i></a> -->
+                                        </div>
+                                        <div class="card__detail">
+                                            <a href="#!Products/ProductDetail?id={{p.id}}"
+                                                class="product__name">{{p.name}}</a>
+                                            <div class="product__price">
+                                                <div class="price_old">$ {{p.price_old}}</div>
+                                                <div class="price_new">$ {{p.price_new}}</div>
+                                            </div>
+                                            <div class="product__footer">
+                                                <div class="product__rate">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                </div>
+                                                <a href="#" class="product__add">add cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__footer mt-5">
+                                <div class="product__navigation">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="product__showmore">
+                                    <p>view 1 to 8 products out of 150</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oder__guide">
+    <div class="container">
+        <div class="title mb-5">Oder Guide</div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__oderguide col-12">
+                    <img src="./public/image/MUAHANG 1.png" alt="" class="img__full border__radius_10">
+                    <p class="desc_order mt-xl-3 text-center">Step 1: Search and select the desired product</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__oderguide col-12">
+                    <img src="./public/image/MUAHANG 2.png" alt="" class="img__full border__radius_10">
+                    <p class="desc_order mt-3 text-center">Step 2: Search and select the desired product</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__oderguide col-12">
+                    <img src="./public/image/MAU HANG 3.png" alt="" class="img__full border__radius_10">
+                    <p class="desc_order mt-3 text-center">Step 3: Search and select the desired product</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card__oderguide col-12">
+                    <img src="./public/image/MUA HANG 4.png" alt="" class="img__full border__radius_10">
+                    <p class="desc_order mt-3 text-center">Step 4: Search and select the desired product</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="news__shop">
+    <div class="container">
+        <div class="title mb-5">News shop</div>
+        <div class="news__content mt_30">
+            <div class="news__content__left">
+                <div class="news_img">
+                    <img src="./public/image/tt_kesach01.jpg" alt="" class="img__full border__radius_10">
+                </div>
+                <div class="news__detail">
+                    <h3 class="news__title">
+                        <a href="#">Mới lạ theo phong cách trang trí</a>
+
+                    </h3>
+                    <p class="news__desc">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s,
+                    </p>
+                    <div class="news_date">
+                        <p class="news__date_time">Date: 12/05/2022</p>
+                        <a href="#" class="btn__add">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="news__content__right">
+                <div class="news__content_item mb-3">
+                    <div class="news__img">
+                        <img src="./public/image/tt_tuong01.jpg" alt="" class="img__full border__radius_10">
+                    </div>
+                    <div class="news__detail">
+                        <h3 class="news__title">
+                            <a href="">Mới lạ theo phong cách trang trí</a>
+
+                        </h3>
+                        <p class="news__desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                        <div class="news_date">
+                            <p class="news__date_time">Date: 12/05/2022</p>
+                            <a href="#" class="btn__add">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__content_item mb-3">
+                    <div class="news__img">
+                        <img src="./public/image/tt_tuong02.jpg" alt="" class="img__full border__radius_10">
+                    </div>
+                    <div class="news__detail">
+                        <h3 class="news__title">
+                            <a href="">Mới lạ theo phong cách trang trí</a>
+                        </h3>
+                        <p class="news__desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                        <div class="news_date">
+                            <p class="news__date_time">Date: 12/05/2022</p>
+                            <a href="#" class="btn__add">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__content_item">
+                    <div class="news__img">
+                        <img src="./public/image/tt_tuong03.jpg" alt="" class="img__full border__radius_10">
+                    </div>
+                    <div class="news__detail">
+                        <h3 class="news__title">
+                            <a href="">Mới lạ theo phong cách trang trí</a>
+                        </h3>
+                        <p class="news__desc">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                        <div class="news_date">
+                            <p class="news__date_time">Date: 12/05/2022</p>
+                            <a href="#" class="btn__add">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
